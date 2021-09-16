@@ -11,6 +11,18 @@
 
     <artifactId>mall-api</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>goods-api</module>
+    </modules>
+    <dependencies>
+        <!--MyBatis Plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 
 

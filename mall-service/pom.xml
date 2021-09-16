@@ -12,6 +12,18 @@
     <artifactId>mall-service</artifactId>
     <packaging>pom</packaging>
     <description>所有微服务工程负公差</description>
+    <dependencies>
+        <dependency>
+            <groupId>com.haibaraai</groupId>
+            <artifactId>mall-service-dependency</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.haibaraai</groupId>
+            <artifactId>mall-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
