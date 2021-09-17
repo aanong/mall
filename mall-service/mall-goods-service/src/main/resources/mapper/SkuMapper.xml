@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mall.goods.mapper.SkuMapper">
+
+    <resultMap id="BaseResultMap" type="mall.goods.domain.Sku">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="INTEGER"/>
+            <result property="num" column="num" jdbcType="INTEGER"/>
+            <result property="image" column="image" jdbcType="VARCHAR"/>
+            <result property="images" column="images" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="spuId" column="spu_id" jdbcType="VARCHAR"/>
+            <result property="categoryId" column="category_id" jdbcType="INTEGER"/>
+            <result property="categoryName" column="category_name" jdbcType="VARCHAR"/>
+            <result property="brandId" column="brand_id" jdbcType="INTEGER"/>
+            <result property="brandName" column="brand_name" jdbcType="VARCHAR"/>
+            <result property="skuAttribute" column="sku_attribute" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,price,
+        num,image,images,
+        create_time,update_time,spu_id,
+        category_id,category_name,brand_id,
+        brand_name,sku_attribute,status
+    </sql>
+</mapper>
