@@ -24,6 +24,7 @@ spring:
   redis:
     host: 122.51.79.127
     port: 6379
+    password: mall123456
 # ====================MybatisPlus====================
 mybatis-plus:
   mapper-locations: mapper/*.xml
