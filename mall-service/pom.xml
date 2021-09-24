@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>com.haibaraai</groupId>
-            <artifactId>mall-util</artifactId>
+            <artifactId>mall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

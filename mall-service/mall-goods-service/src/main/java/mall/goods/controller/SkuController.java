@@ -1,9 +1,10 @@
 package mall.goods.controller;
 
 
-import com.haibaraai.mall.util.RespResult;
+
 import mall.goods.domain.Sku;
 import mall.goods.service.SkuService;
+import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

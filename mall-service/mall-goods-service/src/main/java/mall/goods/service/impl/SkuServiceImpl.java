@@ -8,6 +8,8 @@ import mall.goods.mapper.AdItemsMapper;
 import mall.goods.service.SkuService;
 import mall.goods.mapper.SkuMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -46,11 +48,13 @@ public class SkuServiceImpl extends ServiceImpl<SkuMapper, Sku>
     }
 
     @Override
+    @CacheEvict("#id")
     public void delTypeSkuItems(Integer id) {
 
     }
 
     @Override
+    @CachePut(key = "#id")
     public List<Sku> updateTypeSkuItems(Integer id) {
 
         //1.查询当前分类下的所有列表信息

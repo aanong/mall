@@ -1,8 +1,9 @@
 package mall.goods.controller;
 
-import com.haibaraai.mall.util.RespResult;
+
 import mall.goods.domain.Category;
 import mall.goods.service.CategoryService;
+import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

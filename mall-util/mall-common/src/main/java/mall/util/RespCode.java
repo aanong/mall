@@ -1,4 +1,4 @@
-package com.haibaraai.mall.util;
+package mall.util;
 
 public enum  RespCode {
 
