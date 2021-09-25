@@ -1,10 +1,10 @@
 package mall.goods.mapper;
 
-import mall.goods.domain.Category;
+import mall.domain.Category;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * @Entity mall.goods.domain.Category
+ * @Entity mall.domain.Category
  */
 public interface CategoryMapper extends BaseMapper<Category> {
 

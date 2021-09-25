@@ -1,10 +1,10 @@
 package mall.goods.mapper;
 
-import mall.goods.domain.AdItems;
+import mall.domain.AdItems;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * @Entity mall.goods.domain.AdItems
+ * @Entity mall.domain.AdItems
  */
 public interface AdItemsMapper extends BaseMapper<AdItems> {
 

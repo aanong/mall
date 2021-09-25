@@ -2,7 +2,7 @@ package mall.goods.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
-import mall.goods.domain.Brand;
+import mall.domain.Brand;
 import mall.goods.service.BrandService;
 import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;

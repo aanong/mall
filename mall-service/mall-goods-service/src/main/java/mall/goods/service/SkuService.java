@@ -1,6 +1,6 @@
 package mall.goods.service;
 
-import mall.goods.domain.Sku;
+import mall.domain.Sku;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;

@@ -1,13 +1,13 @@
 package mall.goods.mapper;
 
-import mall.goods.domain.Brand;
+import mall.domain.Brand;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
 /**
- * @Entity mall.goods.domain.Brand
+ * @Entity mall.domain.Brand
  */
 public interface BrandMapper extends BaseMapper<Brand> {
     /****

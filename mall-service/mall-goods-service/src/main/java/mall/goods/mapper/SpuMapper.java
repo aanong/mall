@@ -1,10 +1,10 @@
 package mall.goods.mapper;
 
-import mall.goods.domain.Spu;
+import mall.domain.Spu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * @Entity mall.goods.domain.Spu
+ * @Entity mall.domain.Spu
  */
 public interface SpuMapper extends BaseMapper<Spu> {
 

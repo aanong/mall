@@ -1,4 +1,4 @@
-package mall.goods.domain;
+package mall.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,38 +8,32 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * 
- * @TableName ad_items
+ * 商品类目
+ * @TableName category
  */
-@TableName(value ="ad_items")
-
+@TableName(value ="category")
 @Data
-public class AdItems implements Serializable {
+public class Category implements Serializable {
     /**
-     * 
+     * 分类ID
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     * 分类名称
      */
     private String name;
-
-    /**
-     * 分类，1首页推广,2列表页推广
-     */
-    private Integer type;
-
-    /**
-     * 展示的产品
-     */
-    private String skuId;
 
     /**
      * 排序
      */
     private Integer sort;
+
+    /**
+     * 上级ID
+     */
+    private Integer parentId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -55,12 +49,11 @@ public class AdItems implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        AdItems other = (AdItems) that;
+        Category other = (Category) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-            && (this.getSkuId() == null ? other.getSkuId() == null : this.getSkuId().equals(other.getSkuId()))
-            && (this.getSort() == null ? other.getSort() == null : this.getSort().equals(other.getSort()));
+            && (this.getSort() == null ? other.getSort() == null : this.getSort().equals(other.getSort()))
+            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()));
     }
 
     @Override
@@ -69,9 +62,8 @@ public class AdItems implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
-        result = prime * result + ((getType() == null) ? 0 : getType().hashCode());
-        result = prime * result + ((getSkuId() == null) ? 0 : getSkuId().hashCode());
         result = prime * result + ((getSort() == null) ? 0 : getSort().hashCode());
+        result = prime * result + ((getParentId() == null) ? 0 : getParentId().hashCode());
         return result;
     }
 
@@ -83,9 +75,8 @@ public class AdItems implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", type=").append(type);
-        sb.append(", skuId=").append(skuId);
         sb.append(", sort=").append(sort);
+        sb.append(", parentId=").append(parentId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
