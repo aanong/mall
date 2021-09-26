@@ -1,4 +1,4 @@
-package mall.domain;
+package mall.goods.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

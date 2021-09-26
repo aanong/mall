@@ -1,7 +1,8 @@
 package mall.goods.service;
 
-import mall.domain.AdItems;
+
 import com.baomidou.mybatisplus.extension.service.IService;
+import mall.goods.domain.AdItems;
 
 /**
  *

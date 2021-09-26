@@ -2,8 +2,8 @@ package mall.goods.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import mall.domain.AdItems;
-import mall.domain.Sku;
+import mall.goods.domain.AdItems;
+import mall.goods.domain.Sku;
 import mall.goods.mapper.AdItemsMapper;
 import mall.goods.service.SkuService;
 import mall.goods.mapper.SkuMapper;

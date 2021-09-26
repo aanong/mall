@@ -1,6 +1,6 @@
 package mall.goods.mapper;
 
-import mall.domain.SkuAttribute;
+import mall.goods.domain.SkuAttribute;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * @Entity mall.domain.SkuAttribute
+ * @Entity mall.goods.domain.SkuAttribute
  */
 
 public interface SkuAttributeMapper extends BaseMapper<SkuAttribute> {

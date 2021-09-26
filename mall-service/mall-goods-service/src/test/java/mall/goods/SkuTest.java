@@ -2,7 +2,7 @@
 //
 //import com.alibaba.fastjson.JSON;
 //import mall.MallGoodsApplication;
-//import mall.domain.Sku;
+//import mall.goods.domain.Sku;
 //import mall.goods.service.SkuService;
 //import org.junit.Test;
 //import org.junit.runner.RunWith;

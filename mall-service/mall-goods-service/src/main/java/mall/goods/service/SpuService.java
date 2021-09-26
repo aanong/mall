@@ -1,6 +1,6 @@
 package mall.goods.service;
 
-import mall.domain.Spu;
+import mall.goods.domain.Spu;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

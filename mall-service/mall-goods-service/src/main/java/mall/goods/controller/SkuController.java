@@ -2,7 +2,7 @@ package mall.goods.controller;
 
 
 
-import mall.domain.Sku;
+import mall.goods.domain.Sku;
 import mall.goods.service.SkuService;
 import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;

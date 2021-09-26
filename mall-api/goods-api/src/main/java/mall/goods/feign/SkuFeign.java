@@ -1,7 +1,7 @@
-package mall.feign;
+package mall.goods.feign;
 
 
-import mall.domain.Sku;
+import mall.goods.domain.Sku;
 import mall.util.RespResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;

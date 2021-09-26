@@ -1,4 +1,4 @@
-package mall.domain;
+package mall.goods.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,32 +8,32 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * 
- * @TableName sku_attribute
+ * 商品类目
+ * @TableName category
  */
-@TableName(value ="sku_attribute")
+@TableName(value ="category")
 @Data
-public class SkuAttribute implements Serializable {
+public class Category implements Serializable {
     /**
-     * ID
+     * 分类ID
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 属性名称
+     * 分类名称
      */
     private String name;
-
-    /**
-     * 属性选项
-     */
-    private String options;
 
     /**
      * 排序
      */
     private Integer sort;
+
+    /**
+     * 上级ID
+     */
+    private Integer parentId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -49,11 +49,11 @@ public class SkuAttribute implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        SkuAttribute other = (SkuAttribute) that;
+        Category other = (Category) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getOptions() == null ? other.getOptions() == null : this.getOptions().equals(other.getOptions()))
-            && (this.getSort() == null ? other.getSort() == null : this.getSort().equals(other.getSort()));
+            && (this.getSort() == null ? other.getSort() == null : this.getSort().equals(other.getSort()))
+            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()));
     }
 
     @Override
@@ -62,8 +62,8 @@ public class SkuAttribute implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
-        result = prime * result + ((getOptions() == null) ? 0 : getOptions().hashCode());
         result = prime * result + ((getSort() == null) ? 0 : getSort().hashCode());
+        result = prime * result + ((getParentId() == null) ? 0 : getParentId().hashCode());
         return result;
     }
 
@@ -75,8 +75,8 @@ public class SkuAttribute implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
-        sb.append(", options=").append(options);
         sb.append(", sort=").append(sort);
+        sb.append(", parentId=").append(parentId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -1,10 +1,10 @@
 package mall.goods.service;
 
-import mall.domain.Category;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
-
+import mall.goods.domain.Category;
 /**
  *
  */

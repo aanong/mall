@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mall.goods.mapper.AdItemsMapper">
 
-    <resultMap id="BaseResultMap" type="mall.domain.AdItems">
+    <resultMap id="BaseResultMap" type="mall.goods.domain.AdItems">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="type" column="type" jdbcType="INTEGER"/>

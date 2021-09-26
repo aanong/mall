@@ -1,7 +1,7 @@
 package mall.goods.controller;
 
 
-import mall.domain.Category;
+import mall.goods.domain.Category;
 import mall.goods.service.CategoryService;
 import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;
