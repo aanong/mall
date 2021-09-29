@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Map;
 
 @Data
-@Document(indexName = "shopsearch",type = "skues")
+@Document(indexName = "mallsearch",type = "sku")
 public class SkuEs {
     @Id
     private String id;
@@ -29,6 +29,7 @@ public class SkuEs {
     private Integer brandId;
     @Field(type=FieldType.Keyword)
     private String brandName;
+    @Field(type=FieldType.Keyword)
     private String skuAttribute;
     private Integer status;
     //属性映射

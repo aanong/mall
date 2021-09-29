@@ -14,6 +14,7 @@
         <module>mall-service/mall-goods-service</module>
         <module>mall-service/mall-canal-service</module>
         <module>mall-service/mall-search-service</module>
+        <module>mall-web/mall-search-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

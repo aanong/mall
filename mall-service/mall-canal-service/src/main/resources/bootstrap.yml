@@ -7,10 +7,10 @@ spring:
     nacos:
       config:
         file-extension: yaml
-        server-addr: 122.51.79.127:8848
+        server-addr: 122.51.79.127:8070
       discovery:
         #Nacos的注册地址
-        server-addr: 122.51.79.127:8848
+        server-addr: 122.51.79.127:8070
   main:
     allow-bean-definition-overriding: true
 #Canal配置

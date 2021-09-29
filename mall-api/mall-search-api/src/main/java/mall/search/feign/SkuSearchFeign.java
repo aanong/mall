@@ -3,10 +3,9 @@ package mall.search.feign;
 import mall.search.model.SkuEs;
 import mall.util.RespResult;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @FeignClient(value = "mall-search")
 public interface SkuSearchFeign {
@@ -24,4 +23,11 @@ public interface SkuSearchFeign {
      */
     @DeleteMapping(value = "/search/del/{id}")
     RespResult del(@PathVariable("id")String id);
+
+    /****
+     * 商品搜索
+     */
+    @GetMapping("/search")
+    public RespResult<Map<String,Object>> search(@RequestParam Map<String,Object>
+                                                         searchMap);
 }

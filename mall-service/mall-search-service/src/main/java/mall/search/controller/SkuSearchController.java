@@ -6,6 +6,8 @@ import mall.util.RespResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping(value = "/search")
 public class SkuSearchController {
@@ -16,6 +18,7 @@ public class SkuSearchController {
      */
     @PostMapping(value = "/add")
     public RespResult add(@RequestBody SkuEs skuEs){
+
         skuSearchService.add(skuEs);
         return RespResult.ok();
     }
@@ -28,5 +31,15 @@ public class SkuSearchController {
     public RespResult del(@PathVariable("id")String id){
         skuSearchService.del(id);
         return RespResult.ok();
+    }
+
+    /****
+     * 商品搜索
+     */
+    @GetMapping
+    public RespResult<Map<String,Object>> search(@RequestParam Map<String,Object>
+                                                         searchMap){
+        Map<String,Object> result = skuSearchService.search(searchMap);
+        return RespResult.ok(result);
     }
 }
