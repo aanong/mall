@@ -16,6 +16,7 @@
     <modules>
         <module>goods-api</module>
         <module>mall-search-api</module>
+        <module>mall-cart-api</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
